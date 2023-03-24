@@ -19,12 +19,12 @@ public class HackerNewsController {
 
     @GetMapping("/top-stories")
     public List<StoryDetails> getTopStoriesDetails() {
-        return hackerNewsService.getTopStoriesDetails();
+        return hackerNewsService.getTop10Stories();
     }
 
     @GetMapping("/past-stories")
-    public List<Long> getAllStories() {
-        return hackerNewsService.getTopStories();
+    public List<StoryDetails> getAllStories() {
+        return hackerNewsService.getPastStories();
     }
 
     @GetMapping("/comments/{storyId}")

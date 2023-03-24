@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  app:
+    image: rahil:hackernewsapi
+    environment:
+      - REDIS_HOST=redis
+    ports:
+      - "8085:8085"
+    depends_on:
+      - redis
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    
