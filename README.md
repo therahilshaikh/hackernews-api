@@ -48,21 +48,7 @@ http://localhost:8085/
     cd hackernews-api
     ```
 
-
-4. Build a jar by running the following command:
-
-    ```bash
-    mvn clean install -DskipTests
-    ```
-
-
-4. Build the Docker image by running the following command:
-
-    ```bash
-    docker build -t rahil:hackernewsapi .
-    ```
-
-5. Run the Docker container by using the `docker-compose up` command:
+4. Run the Docker container by using the `docker-compose up` command:
 
     ```bash
     docker-compose up
