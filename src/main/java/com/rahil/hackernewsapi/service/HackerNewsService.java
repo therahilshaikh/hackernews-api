@@ -56,7 +56,7 @@ public class HackerNewsService {
         return topStoryDetails;
     }
 
-    @Cacheable(value = "comments", key = "'comments'")
+    @Cacheable(value = "comments", key = "'comments'+#storyId")
     public List<Comment> getComments(String storyId) {
         RestTemplate restTemplate = new RestTemplate();
         StoryDetails storyDetails = restTemplate.getForObject(String.format(COMMENT_API_URL, storyId),
