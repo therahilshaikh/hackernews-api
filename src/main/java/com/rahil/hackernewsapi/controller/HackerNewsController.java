@@ -15,7 +15,12 @@ import com.rahil.hackernewsapi.service.HackerNewsService;
 public class HackerNewsController {
 
     @Autowired
-    private HackerNewsService hackerNewsService;
+    HackerNewsService hackerNewsService;
+
+    @GetMapping("/")
+    public String getHome() {
+        return "Hacker News APIs started!";
+    } 
 
     @GetMapping("/top-stories")
     public List<StoryDetails> getTopStoriesDetails() {
